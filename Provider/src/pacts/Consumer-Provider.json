@@ -1,0 +1,62 @@
+{
+    "provider": {
+        "name": "Provider"
+    },
+    "consumer": {
+        "name": "Consumer"
+    },
+    "interactions": [
+        {
+            "description": "A request to /users/1",
+            "request": {
+                "method": "GET",
+                "path": "/users/1"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json; charset=UTF-8"
+                },
+                "body": {
+                    "name": "Pepe"
+                },
+                "matchingRules": {
+                    "body": {
+                        "$.name": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        }
+                    },
+                    "header": {
+                        "Content-Type": {
+                            "matchers": [
+                                {
+                                    "match": "regex",
+                                    "regex": "application/json;\\s?charset=(utf|UTF)-8"
+                                }
+                            ],
+                            "combine": "AND"
+                        }
+                    }
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "User 1 exists"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pactSpecification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.24"
+        }
+    }
+}
