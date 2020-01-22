@@ -2,11 +2,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.web.client.RestTemplate;
 
-public class UserServiceClient {
+public class ConsumerApplication {
 
     private final RestTemplate restTemplate;
 
-    public UserServiceClient(@Value("${user-service.base-url}") String baseUrl) {
+    public ConsumerApplication(@Value("${user-service.base-url}") String baseUrl) {
         this.restTemplate = new RestTemplateBuilder().rootUri(baseUrl).build();
     }
 

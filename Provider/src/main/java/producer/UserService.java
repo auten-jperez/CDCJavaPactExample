@@ -7,8 +7,9 @@ public class UserService {
 
     public User findUser(String userId) {
         return User.builder()
-                .name("Pepe")
-                .nombre("Pepe")
+                .name("Paco")
+                .city("Madrid")
+                .age(22)
                 .build();
     }
 }

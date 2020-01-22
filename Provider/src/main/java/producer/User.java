@@ -7,5 +7,6 @@ import lombok.Data;
 @Builder
 public class User {
     private String name;
-    private String nombre;
+    private String city;
+    private int age;
 }

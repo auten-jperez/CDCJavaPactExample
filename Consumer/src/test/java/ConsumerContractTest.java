@@ -16,20 +16,20 @@ import static org.junit.Assert.assertEquals;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE,
 properties = "user-service.base-url:http://localhost:8080",
-classes = UserServiceClient.class)
-public class UserServiceContractTest {
+classes = ConsumerApplication.class)
+public class ConsumerContractTest {
 
     @Rule
     public PactProviderRuleMk2 provider = new PactProviderRuleMk2("Provider", null, 8080, this);
 
     @Autowired
-    private UserServiceClient userServiceClient;
+    private ConsumerApplication consumerApplication;
 
     @PactVerification(fragment = "pactUserExists")
     @Test
     public void userExists() {
-        User user = userServiceClient.getUser("1");
-        assertEquals(user.getName(), "user name for CDC");
+        User user = consumerApplication.getUser("1");
+        assertEquals(user.getName(), "Pepe");
     }
 
     @Pact(consumer = "Consumer")
@@ -42,6 +42,8 @@ public class UserServiceContractTest {
                 .status(200)
                 .body(LambdaDsl.newJsonBody(o -> o
                     .stringType("name", "Pepe")
+                    .stringType("city", "Madrid")
+                    .numberType("age", 22)
                     ).build())
                 .toPact();
     }

@@ -18,7 +18,9 @@
                     "Content-Type": "application/json; charset=UTF-8"
                 },
                 "body": {
-                    "name": "user name for CDC"
+                    "age": 22,
+                    "city": "Madrid",
+                    "name": "Pepe"
                 },
                 "matchingRules": {
                     "body": {
@@ -26,6 +28,22 @@
                             "matchers": [
                                 {
                                     "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.city": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.age": {
+                            "matchers": [
+                                {
+                                    "match": "number"
                                 }
                             ],
                             "combine": "AND"
