@@ -1,5 +1,6 @@
 import au.com.dius.pact.provider.junit.Provider;
 import au.com.dius.pact.provider.junit.State;
+import au.com.dius.pact.provider.junit.loader.PactBroker;
 import au.com.dius.pact.provider.junit.loader.PactFolder;
 import au.com.dius.pact.provider.junit.target.Target;
 import au.com.dius.pact.provider.junit.target.TestTarget;
@@ -11,7 +12,8 @@ import producer.UserServiceApplication;
 
 @RunWith(SpringRestPactRunner.class)
 @Provider("Provider")
-@PactFolder("src/pacts")
+//@PactFolder("src/pacts")
+@PactBroker(host = "localhost")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = UserServiceApplication.class)
 public class ContractTest {
 

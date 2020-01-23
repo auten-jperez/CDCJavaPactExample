@@ -1,0 +1,25 @@
+
+@
+Provider/pom.xml,d/4/d45c8b79d1f22e4cbbc1131ec68dcab0dd050d9e
+k
+;Provider/src/main/java/producer/UserServiceApplication.java,f/6/f6f98434e48afe3aa87b92ce0c93d81083717d02
+P
+ Consumer/src/main/java/User.java,6/c/6c58967117f6e176fc9d34acc4964fb3a6ff3f01
+c
+3Provider/src/main/java/producer/UserController.java,6/6/662b25421322e6f23bad8165710dd34826bfa52a
+`
+0Provider/src/main/java/producer/UserService.java,5/d/5daab45d3d29af49a0841edcba708353bdba1f0b
+Y
+)Provider/src/main/java/producer/User.java,2/0/203e103f3d63319439966fd754abbb73fc9eac3a
+_
+/Consumer/src/main/java/ConsumerApplication.java,e/1/e1f6b3653895dc126c6b6e12abade924eac8b8d0
+Y
+)Provider/src/pacts/Consumer-Provider.json,c/d/cd4d01bc9281ab80c63050c3c5ea277a031bb023
+X
+(Provider/src/test/java/ContractTest.java,8/7/873f17c8f473265536540884762dabaacb97804f
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+@
+Consumer/pom.xml,2/a/2a67e5a599b62f0268b10fd56814464e13d55d3d
+`
+0Consumer/src/test/java/ConsumerContractTest.java,9/6/963a0982a6e30f47bd2298fd75589f86fb1d135b

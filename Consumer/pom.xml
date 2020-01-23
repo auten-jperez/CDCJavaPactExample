@@ -11,4 +11,20 @@
 
     <artifactId>Consumer</artifactId>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>au.com.dius</groupId>
+                <artifactId>pact-jvm-provider-maven_2.11</artifactId>
+                <version>3.5.5</version>
+                <configuration>
+                    <pactDirectory>target/pacts</pactDirectory> <!-- Defaults to ${project.build.directory}/pacts -->
+                    <pactBrokerUrl>http://localhost</pactBrokerUrl>
+                    <projectVersion>1.0.100</projectVersion> <!-- Defaults to ${project.version} -->
+                    <trimSnapshot>true</trimSnapshot> <!-- Defaults to false -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
